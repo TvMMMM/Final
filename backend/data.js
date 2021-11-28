@@ -1,0 +1,112 @@
+import bcrypt from "bcryptjs";
+
+const data = {
+  users: [
+    {
+      name: "Minh",
+      email: "admin@gmail.com",
+      password: bcrypt.hashSync("1234", 8),
+      isAdmin: true,
+      isSeller: true,
+      seller: {
+        name: "Minh",
+        logo: "/images/Logo/Adidas.jpg",
+        description: "Hot seller",
+        rating: 4.0,
+        numReviews: 50,
+      },
+    },
+    {
+      name: "Nam",
+      email: "nam@gmail.com",
+      password: bcrypt.hashSync("1234", 8),
+      isAdmin: false,
+      isSeller: true,
+      seller: {
+        name: "Nam",
+        logo: "/images/Logo/Nike.jpg",
+        description: "Hot seller",
+        rating: 4.0,
+        numReviews: 30,
+      },
+    },
+    {
+      name: "Son",
+      email: "son@gmail.com",
+      password: bcrypt.hashSync("1234", 8),
+      isAdmin: false,
+    },
+  ],
+  products: [
+    {
+      name: "White T-Shirt",
+      category: "T-Shirt",
+      image: "/images/Tshirt/Basic.jpg",
+      price: 40,
+      countInStock: 0,
+      brand: "No brand",
+      rating: 4.5,
+      numReviews: 15,
+
+      description: "Basic shirt with high quality materials",
+    },
+    {
+      name: "White Adidas Shirt",
+      category: "T-Shirt",
+      image: "/images/Tshirt/Adidas.jpg",
+      price: 60,
+      countInStock: 6,
+      brand: "Adidas",
+      rating: 4.7,
+      numReviews: 20,
+
+      description: "Basic shirt with high quality materials",
+    },
+    {
+      name: "Black pant",
+      category: "Pant",
+      image: "/images/Pants/Basicpant.jpg",
+      price: 40,
+      countInStock: 0,
+      brand: "No brand",
+      rating: 4.0,
+      numReviews: 18,
+
+      description: "Basic pant with high quality materials",
+    },
+    {
+      name: "Gray Adidas Pant",
+      category: "Pant",
+      image: "/images/Pants/Adidaspant2.jpg",
+      price: 60,
+      countInStock: 6,
+      brand: "Adidas",
+      rating: 4.7,
+      numReviews: 10,
+      description: "Hot adidas pant",
+    },
+    {
+      name: "Adidas Jacket",
+      category: "Jacket",
+      image: "/images/Jacket/Adidasjacket.jpg",
+      price: 180,
+      countInStock: 3,
+      brand: "Adidas",
+      rating: 4.5,
+      numReviews: 20,
+      description: "Nice and cool jacket from Adidas",
+    },
+    {
+      name: "White Jacket",
+      category: "Jacket",
+      image: "/images/Jacket/Basicjacket.jpg",
+      price: 130,
+      countInStock: 8,
+      brand: "No brand",
+      rating: 4.3,
+      numReviews: 25,
+      description: "Jacket with high quality materials",
+    },
+  ],
+};
+export default data;
