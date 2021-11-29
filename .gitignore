@@ -24,5 +24,7 @@ yarn-error.log*
 
 package-lock.json
 
-
+.env
 /uploads/*.jpg 
+
+
