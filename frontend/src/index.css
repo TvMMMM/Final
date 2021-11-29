@@ -188,6 +188,15 @@ button.close-sidebar {
   padding: 0.3rem 0.8rem;
 }
 
+/* Rating */
+.rating span {
+  color: #f7c640;
+  margin: 0.1rem;
+}
+.rating span:last-child {
+  color: #404040;
+}
+
 /* Image */
 img {
   border-radius: 0.5rem;
@@ -197,19 +206,20 @@ img.small {
   width: 100%;
 }
 img.medium {
-  max-width: 29rem;
+  max-width: 35rem;
   width: 100%;
 }
 img.large {
-  width: 100%;
+  width: 60%;
 }
 
 /* Card */
 .card {
-  border: 0.1rem #c0c0c0 solid;
+  border: 0.2rem #c0c0c0 solid;
   background-color: #f0f0f0;
   border-radius: 0.5rem;
   margin: 1rem;
+  box-shadow: 0 0 0.15em;
 }
 .card-body {
   padding: 1rem;
