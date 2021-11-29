@@ -20,6 +20,8 @@ $ npm start <br />
 
 <h3>5. Create Users and Products </h3>
 Run on the browser:  <br />
-http://localhost:5000/api/users/createUsers to get admin account <br />
-http://localhost:5000/api/product/createProducts to create 6 sample products <br />
+http://localhost:5000/api/users/createUsers <br/>
+to get admin account <br />
+http://localhost:5000/api/product/createProducts <br/>
+to create 6 sample products <br />
 
