@@ -1,8 +1,8 @@
 {
-  "name": "amazona",
+  "name": "TvMShop",
   "type": "module",
   "version": "1.0.0",
-  "description": "Ecommerce website like amazon",
+  "description": "Ecommerce website",
   "main": "index.js",
   "scripts": {
     "build": "cd frontend && npm install && npm run build",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/basir/amazona.git"
+    "url": "git+https://github.com/TvMMMM/Final.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/basir/amazona/issues"
+    "url": "https://github.com/TvMMMM/Final/issues"
   },
-  "homepage": "https://github.com/basir/amazona#readme",
+  "homepage": "https://github.com/TvMMMM/Final#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
@@ -30,8 +30,7 @@
     "socket.io": "^4.0.1"
   },
   "devDependencies": {
-    "eslint": "^7.9.0",
-    "eslint-plugin-react": "^7.21.2",
+        "eslint-plugin-react": "^7.21.2",
     "nodemon": "^2.0.4"
   }
 }

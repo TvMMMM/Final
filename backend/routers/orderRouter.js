@@ -8,7 +8,7 @@ import {
   isAuth,
   isSellerOrAdmin,
   mailgun,
-  payOrderEmailTemplate,
+  // payOrderEmailTemplate,
 } from "../utils.js";
 
 const orderRouter = express.Router();
@@ -139,23 +139,23 @@ orderRouter.put(
         email_address: req.body.email_address,
       };
       const updatedOrder = await order.save();
-      mailgun()
-        .messages()
-        .send(
-          {
-            from: "TvMShop <tvmshop@mg.sandboxcd3aa8644fd849a9821e0eb6ca6e0c00.com>",
-            to: `${order.user.name} <${order.user.email}>`,
-            subject: `New order ${order._id}`,
-            html: payOrderEmailTemplate(order),
-          },
-          (error, body) => {
-            if (error) {
-              console.log(error);
-            } else {
-              console.log(body);
-            }
-          }
-        );
+      // mailgun()
+      //   .messages()
+      //   .send(
+      //     {
+      //       from: "TvMShop <tvmshop@mg.sandboxcd3aa8644fd849a9821e0eb6ca6e0c00.com>",
+      //       to: `${order.user.name} <${order.user.email}>`,
+      //       subject: `New order ${order._id}`,
+      //       html: payOrderEmailTemplate(order),
+      //     },
+      //     (error, body) => {
+      //       if (error) {
+      //         console.log(error);
+      //       } else {
+      //         console.log(body);
+      //       }
+      //     }
+      //   );
       res.send({ message: "Order Paid", order: updatedOrder });
     } else {
       res.status(404).send({ message: "Order Not Found" });
