@@ -61,7 +61,7 @@ export default function ProductEditScreen(props) {
     );
   };
   const [loadingUpload, setLoadingUpload] = useState(false);
-  const [errorUpload, setErrorUpload] = useState("");
+  const [errorUpload, setErrorUpload] = useState(false);
 
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
@@ -79,8 +79,9 @@ export default function ProductEditScreen(props) {
       });
       setImage(data);
       setLoadingUpload(false);
+      setErrorUpload(false)
     } catch (error) {
-      setErrorUpload(error.message);
+      setErrorUpload("Only .png, .jpg, .jpeg format allowed", true);
       setLoadingUpload(false);
     }
   };
@@ -113,7 +114,8 @@ export default function ProductEditScreen(props) {
               <label htmlFor="price">Price</label>
               <input
                 id="price"
-                type="text"
+                type="number"
+                min="1"
                 placeholder="Enter price"
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}

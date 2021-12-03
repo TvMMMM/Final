@@ -206,9 +206,7 @@ img.small {
   width: 100%;
 }
 img.medium {
-  max-width: 35rem;
-  width: 426px;
-  height: 548px;
+  max-width: 30rem;
 }
 img.large {
   width: 60%;
@@ -219,7 +217,7 @@ img.large {
   border: 0.2rem #c0c0c0 solid;
   background-color: #f0f0f0;
   border-radius: 0.5rem;
-  margin: 1rem;
+  margin: 2rem;
   box-shadow: 0 0 0.15em;
 }
 .card-body {
@@ -330,7 +328,7 @@ img.large {
 }
 /* Carousel */
 .carousel .slide img {
-  max-width: 30rem;
+  max-width: 25rem;
 }
 
 /* Search */
