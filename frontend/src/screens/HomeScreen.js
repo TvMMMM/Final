@@ -10,8 +10,10 @@ import { listTopSellers } from '../actions/userActions';
 import { Link, useParams } from 'react-router-dom';
 
 export default function HomeScreen() {
-  const dispatch = useDispatch();
+
   const { pageNumber = 1 } = useParams();
+
+  const dispatch = useDispatch();
   
   const productList = useSelector((state) => state.productList);
   const { loading, error, products, page, pages } = productList;
@@ -26,9 +28,8 @@ export default function HomeScreen() {
   useEffect(() => {
     dispatch(listProducts({ pageNumber }));
     dispatch(listTopSellers());
+    console.log(pageNumber);
   }, [dispatch, pageNumber ]);
-
-  console.log(pageNumber);
 
   return (
     <div>
@@ -72,7 +73,7 @@ export default function HomeScreen() {
               <Link
                 className={x + 1 === page ? 'active' : ''}
                 key={x + 1}
-                to={`/page/${x + 1}`}
+                to={`/home/${x + 1}`}
               >
                 {x + 1}
               </Link>

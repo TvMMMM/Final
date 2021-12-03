@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { BrowserRouter, Link, Route } from "react-router-dom";
+import { BrowserRouter, Link, Route, Redirect } from "react-router-dom";
 import { signout } from "./actions/userActions";
 import AdminRoute from "./components/AdminRoute";
 import PrivateRoute from "./components/PrivateRoute";
@@ -64,7 +64,7 @@ function App() {
             >
               <img src={sidebar} alt={sidebar} width="20px" height="20px" />
             </button>
-            <Link className="brand" to="/page/1">
+            <Link className="brand" to="/home/1">
               TvM Shop
             </Link>
           </div>
@@ -233,9 +233,16 @@ function App() {
             component={ProductListScreen}
             exact/>
           <Route 
-            path="/page/:pageNumber" 
+            path="/home" 
             component={HomeScreen} 
             exact/>
+          <Route 
+            path="/home/:pageNumber" 
+            component={HomeScreen} 
+            />
+          <Route exact path="/" render={() => (
+            <Redirect to="/home"/>
+          )}/>
 
           <PrivateRoute
             path="/profile"
