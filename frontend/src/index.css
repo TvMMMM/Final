@@ -207,7 +207,8 @@ img.small {
 }
 img.medium {
   max-width: 35rem;
-  width: 100%;
+  width: 426px;
+  height: 548px;
 }
 img.large {
   width: 60%;
