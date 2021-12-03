@@ -7,6 +7,7 @@ import MessageBox from "../components/MessageBox";
 import Rating from "../components/Rating";
 import back from "../icons/back.svg";
 import { PRODUCT_REVIEW_CREATE_RESET } from "../constants/productConstants";
+import { addToCart } from "../actions/cartActions";
 
 export default function ProductScreen(props) {
   const dispatch = useDispatch();
@@ -37,7 +38,7 @@ export default function ProductScreen(props) {
     dispatch(detailsProduct(productId));
   }, [dispatch, productId, successReviewCreate]);
   const addToCartHandler = () => {
-    props.history.push(`/cart/${productId}?qty=${qty}`);
+    dispatch(addToCart(productId, qty));
   };
   const submitHandler = (e) => {
     e.preventDefault();
