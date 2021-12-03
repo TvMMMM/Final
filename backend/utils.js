@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import mg from "mailgun-js";
+// import mg from "mailgun-js";
 
 export const generateToken = (user) => {
   return jwt.sign(
@@ -59,11 +59,11 @@ export const isSellerOrAdmin = (req, res, next) => {
   }
 };
 
-export const mailgun = () =>
-  mg({
-    apiKey: process.env.MAILGUN_API_KEY,
-    domain: process.env.MAILGUN_DOMAIN,
-  });
+// export const mailgun = () =>
+//   mg({
+//     apiKey: process.env.MAILGUN_API_KEY,
+//     domain: process.env.MAILGUN_DOMAIN,
+//   });
 
 // export const payOrderEmailTemplate = (order) => {
 //   return `<h1>Thanks for shopping with us</h1>

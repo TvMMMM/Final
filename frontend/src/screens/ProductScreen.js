@@ -57,7 +57,7 @@ export default function ProductScreen(props) {
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <div>
-          <Link to="/">
+          <Link to="/page/1">
             <img src={back} alt={back} width="30px" height="25px" />
           </Link>
           <div className="row top">
@@ -90,7 +90,7 @@ export default function ProductScreen(props) {
               <div className="card card-body">
                 <ul>
                   <li>
-                    Seller{" "}
+                    Seller
                     <h2>
                       <Link to={`/seller/${product.seller._id}`}>
                         {product.seller.seller.name}

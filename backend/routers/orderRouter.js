@@ -7,7 +7,6 @@ import {
   isAdmin,
   isAuth,
   isSellerOrAdmin,
-  mailgun,
   // payOrderEmailTemplate,
 } from "../utils.js";
 

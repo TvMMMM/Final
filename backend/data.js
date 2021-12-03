@@ -4,13 +4,13 @@ const data = {
   users: [
     {
       name: "Minh",
-      email: "admin@gmail.com",
+      email: "minh@gmail.com",
       password: bcrypt.hashSync("1234", 8),
-      isAdmin: true,
+      isAdmin: false,
       isSeller: true,
       seller: {
         name: "Minh",
-        logo: "/images/Logo/Adidas.jpg",
+        logo: "/images/Logo/Seller.png",
         description: "Hot seller",
         rating: 4.0,
         numReviews: 50,
@@ -18,17 +18,10 @@ const data = {
     },
     {
       name: "Nam",
-      email: "nam@gmail.com",
+      email: "admin@gmail.com",
       password: bcrypt.hashSync("1234", 8),
-      isAdmin: false,
-      isSeller: true,
-      seller: {
-        name: "Nam",
-        logo: "/images/Logo/Nike.jpg",
-        description: "Hot seller",
-        rating: 4.0,
-        numReviews: 30,
-      },
+      isAdmin: true,
+      isSeller: false,
     },
     {
       name: "Son",
@@ -41,7 +34,7 @@ const data = {
     {
       name: "White T-Shirt",
       category: "T-Shirt",
-      image: "/images/Tshirt/Basic.jpg",
+      image: "/images/Tshirt/Basic2.jpg",
       price: 40,
       countInStock: 0,
       brand: "No brand",
@@ -106,6 +99,17 @@ const data = {
       rating: 4.3,
       numReviews: 25,
       description: "Jacket with high quality materials",
+    },
+    {
+      name: "Nike Jacket",
+      category: "Jacket",
+      image: "/images/Jacket/Nikejacket.jpg",
+      price: 150,
+      countInStock: 8,
+      brand: "Nike",
+      rating: 0,
+      numReviews: 0,
+      description: "Cool Jacket from Nike",
     },
   ],
 };

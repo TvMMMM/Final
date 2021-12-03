@@ -1,9 +1,10 @@
+
 const data = {
   products: [
     {
       name: "White T-Shirt",
       category: "T-Shirt",
-      image: "/images/Tshirt/Basic.jpg",
+      image: "/images/Tshirt/Basic2.jpg",
       price: 40,
       countInStock: 0,
       brand: "No brand",
@@ -68,6 +69,17 @@ const data = {
       rating: 4.3,
       numReviews: 25,
       description: "Jacket with high quality materials",
+    },
+    {
+      name: "Nike Jacket",
+      category: "Jacket",
+      image: "/images/Jacket/Nikejacket.jpg",
+      price: 150,
+      countInStock: 8,
+      brand: "Nike",
+      rating: 0,
+      numReviews: 0,
+      description: "Cool Jacket from Nike",
     },
   ],
 };

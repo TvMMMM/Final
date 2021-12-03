@@ -16,7 +16,7 @@ export default function SellerScreen(props) {
   const {
     loading: loadingProducts,
     error: errorProducts,
-    products,
+    products,    
   } = productList;
 
   const dispatch = useDispatch();
@@ -52,9 +52,6 @@ export default function SellerScreen(props) {
                 rating={user.seller.rating}
                 numReviews={user.seller.numReviews}
               ></Rating>
-            </li>
-            <li>
-              <a href={`mailto:${user.email}`}>Contact Seller</a>
             </li>
             <li>{user.seller.description}</li>
           </ul>
