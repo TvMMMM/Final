@@ -16,10 +16,6 @@ import {
   ORDER_LIST_REQUEST,
   ORDER_LIST_SUCCESS,
   ORDER_LIST_FAIL,
-  ORDER_DELETE_REQUEST,
-  ORDER_DELETE_SUCCESS,
-  ORDER_DELETE_FAIL,
-  ORDER_DELETE_RESET,
   ORDER_DELIVER_REQUEST,
   ORDER_DELIVER_SUCCESS,
   ORDER_DELIVER_FAIL,
@@ -95,20 +91,20 @@ export const orderListReducer = (state = { orders: [] }, action) => {
       return state;
   }
 };
-export const orderDeleteReducer = (state = {}, action) => {
-  switch (action.type) {
-    case ORDER_DELETE_REQUEST:
-      return { loading: true };
-    case ORDER_DELETE_SUCCESS:
-      return { loading: false, success: true };
-    case ORDER_DELETE_FAIL:
-      return { loading: false, error: action.payload };
-    case ORDER_DELETE_RESET:
-      return {};
-    default:
-      return state;
-  }
-};
+// export const orderDeleteReducer = (state = {}, action) => {
+//   switch (action.type) {
+//     case ORDER_DELETE_REQUEST:
+//       return { loading: true };
+//     case ORDER_DELETE_SUCCESS:
+//       return { loading: false, success: true };
+//     case ORDER_DELETE_FAIL:
+//       return { loading: false, error: action.payload };
+//     case ORDER_DELETE_RESET:
+//       return {};
+//     default:
+//       return state;
+//   }
+// };
 
 export const orderDeliverReducer = (state = {}, action) => {
   switch (action.type) {
