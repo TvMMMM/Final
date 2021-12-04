@@ -65,6 +65,8 @@ export default function RegisterScreen(props) {
           <input
             type="password"
             id="password"
+            pattern=".{8,16}"
+            title="More than 8 character"
             placeholder="Enter password"
             required
             onChange={(e) => setPassword(e.target.value)}

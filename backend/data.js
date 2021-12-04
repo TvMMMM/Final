@@ -5,7 +5,7 @@ const data = {
     {
       name: "Minh",
       email: "minh@gmail.com",
-      password: bcrypt.hashSync("1234", 8),
+      password: bcrypt.hashSync("minh1234", 8),
       isAdmin: false,
       isSeller: true,
       seller: {
@@ -19,14 +19,14 @@ const data = {
     {
       name: "Nam",
       email: "admin@gmail.com",
-      password: bcrypt.hashSync("1234", 8),
+      password: bcrypt.hashSync("admin1234", 8),
       isAdmin: true,
       isSeller: false,
     },
     {
       name: "Son",
       email: "son@gmail.com",
-      password: bcrypt.hashSync("1234", 8),
+      password: bcrypt.hashSync("son1234", 8),
       isAdmin: false,
     },
   ],

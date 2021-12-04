@@ -61,7 +61,7 @@ export default function ProfileScreen() {
   };
 
   const [loadingUpload, setLoadingUpload] = useState(false);
-  const [errorUpload, setErrorUpload] = useState("");
+  const [errorUpload, setErrorUpload] = useState(false);
 
   const uploadFileHandler = async (e) => {
     const file = e.target.files[0];
@@ -77,8 +77,9 @@ export default function ProfileScreen() {
       });
       setSellerLogo(data);
       setLoadingUpload(false);
+      setErrorUpload(false);
     } catch (error) {
-      setErrorUpload(error.message);
+      setErrorUpload("Only .png, .jpg, .jpeg format allowed", true);
       setLoadingUpload(false);
     }
   };

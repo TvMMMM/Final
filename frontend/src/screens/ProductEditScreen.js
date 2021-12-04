@@ -79,7 +79,7 @@ export default function ProductEditScreen(props) {
       });
       setImage(data);
       setLoadingUpload(false);
-      setErrorUpload(false)
+      setErrorUpload(false);
     } catch (error) {
       setErrorUpload("Only .png, .jpg, .jpeg format allowed", true);
       setLoadingUpload(false);
@@ -116,6 +116,7 @@ export default function ProductEditScreen(props) {
                 id="price"
                 type="number"
                 min="1"
+                max="999"
                 placeholder="Enter price"
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}
